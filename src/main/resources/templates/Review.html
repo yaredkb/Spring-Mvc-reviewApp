@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Review</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link href="http://cdn.jsdeliver.net/webjars/bootstrap/3.3.7/css/bootstrap.min.css"
+	th:href="@{/Webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
+	rel="stylesheet" media="screen"/>
+	<script src="http://cdn.jsdeliver.net/webjars/jquery-3.1.1/jquery.min.js"
+	th:href="@{/Webjars/jquery/3.1.1/css/jquery.min.css}"></script>
+	<link href="../static/css/spping-core.css"
+		th:href="@{css/spping-core.css}" rel="stylesheet" media="screen"/>
+<body>
+<div class="Container">
+	<div class="col-sm-6 col-sm-4">
+		<p th:text="'Id: ' + ${repositories.id}"/p>
+		<p th:text="'Title: ' + ${repositories.title}"/p> 	
+		<p th:text="'Review Category: ' + ${repositories.reviewCatagory}"/p> 	
+		<p th:text="'Content: ' + ${repositories.content}"/p> 	
+	</div>
+
+	<div class="col-sm-6 col-sm-8">
+
+		<img src="th:src="${repositories.imageUsrl}" class="img-rounded" alt="Iphone" width="300" height="300"/>
+	</div>
+</div>
+
+<script type="http://code.jquery.js"></script>
+<script type="/js/bootstrap.main.js"></script>
+
+</body>
+</html>

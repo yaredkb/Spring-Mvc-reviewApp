@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+	<title>Reviews</title>
+	
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link href="http://cdn.jsdeliver.net/webjars/bootstrap/3.3.7/css/bootstrap.min.css"
+	th:href="@{/Webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
+	rel="stylesheet" media="screen"/>
+	<script src="http://cdn.jsdeliver.net/webjars/jquery-3.1.1/jquery.min.js"
+	th:href="@{/Webjars/jquery/3.1.1/css/jquery.min.css}"></script>
+	<link href="../static/css/spping-core.css"
+		th:href="@{css/spping-core.css}" rel="stylesheet" media="screen"/>
+<body>
+<div class="Container">
+	<h1>Reviews</h1>
+	<hr/>
+	<div class="Row" th:each="repositories : ${repositories}">
+		<div class="col-sm-6 col-sm-8 col-sm-6">
+		//<p th:text="${repository.id">1</p>
+		<p th:text="'Id: ' + ${repositories.id}">1</p>
+		<p th:text="'Title: ' + ${repositories.title}">Title</p> 	
+		<p th:text="'Review Category: ' + ${repositories.reviewCatagory}"> Review Catagory</p> 	
+		<p th:text="'Content: ' + ${repositories.content}"> Content</p> 
+		<a th:href="@{http://localhost:8080/showReview(id=${repository.id})}">view more Details</a>
+		<hr/>
+
+	</div>
+
+
+	
+</div>
+
+<script type="http://code.jquery.js"></script>
+<script type="/js/bootstrap.main.js"></script>
+
+</body>
+</html>
